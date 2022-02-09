@@ -1,0 +1,10 @@
+spring.application.name: kafka-streams-gstate-store-reproducer
+spring.cloud.stream.bindings.process-in-0:
+  destination: incoming
+spring.cloud.stream.bindings.process-out-0:
+  destination: outgoing
+spring.cloud.stream.kafka.streams.binder:
+  configuration:
+    default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+    default.value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+    commit.interval.ms: 1000
